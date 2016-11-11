@@ -110,13 +110,12 @@ int		check_tetri(char **map, t_tetri *tetri, int size)
 			{
 				ft_putendl("Found.");
 				i++;
+				if (i == 4)
+					return (1);
 			}
 			x++;
 		}
 		y++;
 	}
-	printf("End Check Tetris\n");
-	if (i == 4)
-		return (1);
 	return (0);
 }
