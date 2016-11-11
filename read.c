@@ -109,29 +109,3 @@ char	*stock_str(int	fd)
 	}
 	return (str);
 }
-
-int		main(int argc, char **argv)
-{
-	char	*stock;
-	int		fd;
-	int		i;
-	t_tetri	*tetri;
-
-	if (argc != 2)
-	{
-		ft_putendl("usage [map]");
-		return (0);
-	}
-	fd = open(argv[1], O_RDONLY);
-	stock = stock_str(fd);
-	if (!check_str(stock))
-	{
-		ft_putendl("error");
-		return (0);
-	}
-	printf("%s", stock);
-	tetri = stock_tetri(stock);
-	close(fd);
-	solve(tetri);
-	return (0);
-}
