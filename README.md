@@ -3,9 +3,8 @@
 
 <strong>tips:</strong>
 
-1. create a check which u can eliminate all the invalid strings.
-2. create a struct which u can contain the infomation about tetrimos.
-    information as:
+1. create a check so that you can eliminate all invalid strings
+2. create a structure so that you can store information about tetrimos, such as:
     - [ ] alphabet
     - [ ] position
     - [ ] adress of the next tetrimos
