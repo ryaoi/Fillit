@@ -36,8 +36,8 @@ Fillit -42 project-
  
 5. create an algorythme to solve the problem (use bruteforce aka backtrack).
  
-6. print the result!
+6. print the result
 
- 7.???
- 
- 8.profit :)
+7. ???
+
+8. Profit :)
