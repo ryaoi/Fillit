@@ -10,7 +10,7 @@
     - [ ] adress of the next tetrimos
 3. create a map for storing tetrimos. 
     Be careful that the map size is neither too big nor too small.
-4. change the information(position) of the tetrimos so that it would be:
+4. change the information (position) of tetrimos so it would look like this before and after:
 
     Before the modification...
     
@@ -52,7 +52,7 @@
  >x[3] = 1
  >y[3] = 1 
  
-5. create an algorythme to solve the problem (use bruteforce aka backtrack).
+5. create an algorhythm to solve the problem (use brute-force algorithm aka backtrack)
  
 6. print the result
 
@@ -63,7 +63,5 @@
 
 p.s. :shipit:
 
-*with my FILLIT
-To solve 10 tetrimos (the z file inside the folder example),
-it take over 1second(precisely 1,07sec).*
+*Using my FILLIT program (or whatever it is!) to solve 10 tetrimos (as provided in the z file inside the example folder) takes just over 1 second (precisely 1.07 sec.).*
 
