@@ -8,8 +8,8 @@
     - [ ] alphabet
     - [ ] position
     - [ ] adress of the next tetrimos
-3. create a map which u will be needed to put tetrimos.
-    Becareful about the size of the map. not too big and not too small.
+3. create a map for storing tetrimos. 
+    Be careful that the map size is neither too big nor too small.
 4. change the information(position) of the tetrimos so that it would be:
 
     Before the modification...
