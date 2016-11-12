@@ -6,9 +6,9 @@
 1. create a check which u can eliminate all the invalid strings.
 2. create a struct which u can contain the infomation about tetrimos.
     information as:
-    - alphabet
-    - position
-    - adress of the next tetrimos
+    - [ ] alphabet
+    - [ ] position
+    - [ ] adress of the next tetrimos
 3. create a map which u will be needed to put tetrimos.
     Becareful about the size of the map. not too big and not too small.
 4. change the information(position) of the tetrimos so that it would be:
