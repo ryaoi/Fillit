@@ -6,7 +6,7 @@
 /*   By: ryaoi <ryaoi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 15:58:01 by ryaoi             #+#    #+#             */
-/*   Updated: 2016/11/12 14:42:48 by ryaoi            ###   ########.fr       */
+/*   Updated: 2016/11/12 17:38:29 by ryaoi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ char		*stock_str(int fd)
 		return (NULL);
 	if (f == 1)
 	{
-		str = (char *)malloc(sizeof(char) * 512);
+		str = (char *)malloc(sizeof(char) * 600);
 		while (f != '\0')
 		{
 			str[i] = c;

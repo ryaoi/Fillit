@@ -1,43 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryaoi <ryaoi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/12 14:15:46 by ryaoi             #+#    #+#             */
-/*   Updated: 2016/11/12 15:34:10 by ryaoi            ###   ########.fr       */
+/*   Created: 2016/11/03 15:02:26 by ryaoi             #+#    #+#             */
+/*   Updated: 2016/11/06 14:53:21 by ryaoi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "fillit.h"
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
 
-int			main(int argc, char **argv)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char	*stock;
-	int		fd;
-	t_tetri	*tetri;
+	char	*str;
+	size_t	i;
 
-	if (argc != 2)
+	i = 0;
+	if (s == NULL)
+		return (NULL);
+	str = ft_strnew(len);
+	if (str == NULL)
+		return (NULL);
+	while (i < len)
 	{
-		ft_putendl("usage [map]");
-		return (0);
+		str[i] = s[start + i];
+		i++;
 	}
-	fd = open(argv[1], O_RDONLY);
-	stock = stock_str(fd);
-	if (!check_str(stock))
-	{
-		ft_putendl("error");
-		return (0);
-	}
-	close(fd);
-	tetri = stock_tetri(stock);
-	solve(tetri);
-	free(tetri);
-	free(stock);
-	return (0);
+	return (str);
 }
