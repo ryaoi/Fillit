@@ -3,16 +3,18 @@ Fillit -42 project-
 
 <strong>tips:</strong>
 
-1. create a check which can eliminate all the invalid strings.
-2. create a struct which can contain the infomation about tetrimos.
+1. create a check which u can eliminate all the invalid strings.
+2. create a struct which u can contain the infomation about tetrimos.
     information as:
     - alphabet
     - position
-    - adress of next tetrimos
+    - adress of the next tetrimos
 3. create a map which u will be needed to put tetrimos.
     Becareful about the size of the map. not too big and not too small.
 4. change the information(position) of the tetrimos so that it would be:
 
+    Before the modification...
+    
  x[0] = 2
  y[0] = 2
  x[1] = 2
@@ -41,3 +43,11 @@ Fillit -42 project-
 7. ???
 
 8. Profit :)
+
+
+p.s.
+
+with my FILLIT
+To solve 10 tetrimos (the z file inside the folder example),
+it take over 1second(precisely 1,07sec).
+
