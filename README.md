@@ -1,5 +1,5 @@
 # Fillit
-Fillit -42 project-
+**Fillit -42 project-**
 
 <strong>tips:</strong>
 
@@ -45,9 +45,9 @@ Fillit -42 project-
 8. Profit :)
 
 
-p.s.
+p.s. :shipit:
 
-with my FILLIT
+*with my FILLIT
 To solve 10 tetrimos (the z file inside the folder example),
-it take over 1second(precisely 1,07sec).
+it take over 1second(precisely 1,07sec).*
 
