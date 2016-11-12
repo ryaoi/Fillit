@@ -21,11 +21,6 @@ x[2] = 3
 y[2] = 2
 x[3] = 3
 y[3] = 3
-
-....\n
-....\n
-.##.\n
-.##.\n
  
  After the modification...
  
@@ -38,10 +33,6 @@ y[2] = 0
 x[3] = 1
 y[3] = 1
 
-##..
-##..
-....
-....
 
  5. create an algorythme to solve the problem (use bruteforce aka backtrack).
  
