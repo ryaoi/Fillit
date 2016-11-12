@@ -1,5 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   map.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ryaoi <ryaoi@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/11/12 14:19:23 by ryaoi             #+#    #+#             */
+/*   Updated: 2016/11/12 15:34:57 by ryaoi            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
 #include "fillit.h"
@@ -14,7 +24,7 @@ char	**tetri_map_new(char **map, int size)
 		return (NULL);
 	while (y < size)
 	{
-		if(!(map[y] = (char *)malloc(sizeof(char) * size + 1)))
+		if (!(map[y] = (char *)malloc(sizeof(char) * size + 1)))
 			return (NULL);
 		x = 0;
 		while (x < size)
@@ -29,7 +39,7 @@ char	**tetri_map_new(char **map, int size)
 	return (map);
 }
 
-char	**tetri_map_dot(char	**map, int size)
+char	**tetri_map_dot(char **map, int size)
 {
 	int x;
 	int y;
@@ -48,9 +58,10 @@ char	**tetri_map_dot(char	**map, int size)
 	return (map);
 }
 
-void	print_map(char	**map, int size)
+void	print_map(char **map)
 {
 	int i;
+
 	if (map == NULL)
 	{
 		ft_putendl("error");
@@ -75,7 +86,7 @@ char	**remove_tetri(char **map, t_tetri *tetri, int size)
 		x = 0;
 		while (x < size)
 		{
-			if(map[y][x] == tetri->c)
+			if (map[y][x] == tetri->c)
 				map[y][x] = '.';
 			x++;
 		}
@@ -97,7 +108,7 @@ char	**insert_tetri(char **map, t_tetri *tetri, int size)
 		x = 0;
 		while (x < size)
 		{
-			if(tetri->y[i] == y && tetri->x[i] == x)
+			if (tetri->y[i] == y && tetri->x[i] == x)
 			{
 				map[y][x] = tetri->c;
 				i++;

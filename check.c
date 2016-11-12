@@ -6,13 +6,12 @@
 /*   By: ryaoi <ryaoi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:16:29 by ryaoi             #+#    #+#             */
-/*   Updated: 2016/11/09 14:59:11 by ryaoi            ###   ########.fr       */
+/*   Updated: 2016/11/12 16:29:18 by ryaoi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "fillit.h"
-#include <stdio.h>
 
 int		check_link(char *stock, int j)
 {
@@ -99,16 +98,14 @@ int		check_tetri(char **map, t_tetri *tetri, int size)
 
 	i = 0;
 	y = 0;
-	printf("Start check tetri with size = %d\n", size);
 	while (y < size)
 	{
 		x = 0;
 		while (x < size)
 		{
-			if(tetri->y[i] < size && tetri->x[i] < size &&
+			if (tetri->y[i] < size && tetri->x[i] < size &&
 				map[tetri->y[i]][tetri->x[i]] == '.')
 			{
-				ft_putendl("Found.");
 				i++;
 				if (i == 4)
 					return (1);

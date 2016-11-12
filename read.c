@@ -6,22 +6,20 @@
 /*   By: ryaoi <ryaoi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 15:58:01 by ryaoi             #+#    #+#             */
-/*   Updated: 2016/11/09 13:42:48 by ryaoi            ###   ########.fr       */
+/*   Updated: 2016/11/12 14:42:48 by ryaoi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <stdio.h>
 #include "fillit.h"
 #include <stdlib.h>
 
-int		count_tetri(char *str)
+int			count_tetri(char *str)
 {
-	int i;
-	int result;
+	int		i;
+	int		result;
 
 	result = 0;
 	i = 0;
@@ -34,10 +32,10 @@ int		count_tetri(char *str)
 	return (result / 4);
 }
 
-void	set_tetri(t_tetri **tmp, char *str)
+void		set_tetri(t_tetri **tmp, char *str)
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
@@ -47,18 +45,16 @@ void	set_tetri(t_tetri **tmp, char *str)
 		{
 			(*tmp)->x[j] = i % 5;
 			(*tmp)->y[j] = i / 5;
-			printf("tmp->x[%d] is : %d\n", j, (*tmp)->x[j]);
-			printf("tmp->y[%d] is : %d\n", j, (*tmp)->y[j]);
 			j++;
 		}
 		i++;
 	}
 }
 
-t_tetri	*stock_tetri(char *str)
+t_tetri		*stock_tetri(char *str)
 {
-	int 	c_tetri;
-	int 	add21;
+	int		c_tetri;
+	int		add21;
 	char	c;
 	t_tetri *stock;
 	t_tetri *tmp;
@@ -84,7 +80,7 @@ t_tetri	*stock_tetri(char *str)
 	return (stock);
 }
 
-char	*stock_str(int	fd)
+char		*stock_str(int fd)
 {
 	int		f;
 	int		i;

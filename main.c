@@ -1,17 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ryaoi <ryaoi@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/11/12 14:15:46 by ryaoi             #+#    #+#             */
+/*   Updated: 2016/11/12 15:34:10 by ryaoi            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include "fillit.h"
 #include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
 
-int main(int argc, char **argv)
+int			main(int argc, char **argv)
 {
 	char	*stock;
 	int		fd;
-	int		i;
 	t_tetri	*tetri;
-	char	**tetri_map;
-	int size;
 
-	size = 2;
 	if (argc != 2)
 	{
 		ft_putendl("usage [map]");
@@ -19,14 +29,15 @@ int main(int argc, char **argv)
 	}
 	fd = open(argv[1], O_RDONLY);
 	stock = stock_str(fd);
-	if (!check(stock))
+	if (!check_str(stock))
 	{
 		ft_putendl("error");
 		return (0);
 	}
 	close(fd);
 	tetri = stock_tetri(stock);
-	tetri_map = tetri_map_new(tetri_map, size);
-	print_map(tetri_map, size);
+	solve(tetri);
+	free(tetri);
+	free(stock);
 	return (0);
 }
