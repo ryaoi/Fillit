@@ -6,7 +6,7 @@
 /*   By: ryaoi <ryaoi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/12 14:19:23 by ryaoi             #+#    #+#             */
-/*   Updated: 2016/11/12 15:34:57 by ryaoi            ###   ########.fr       */
+/*   Updated: 2016/11/22 20:22:48 by ryaoi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,25 +36,6 @@ char	**tetri_map_new(char **map, int size)
 		y++;
 	}
 	map[y] = 0;
-	return (map);
-}
-
-char	**tetri_map_dot(char **map, int size)
-{
-	int x;
-	int y;
-
-	y = 0;
-	while (y < size)
-	{
-		x = 0;
-		while (x < size)
-		{
-			map[y][x] = '.';
-			x++;
-		}
-		y++;
-	}
 	return (map);
 }
 
